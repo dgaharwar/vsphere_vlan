@@ -28,8 +28,8 @@ variable "morpheus_url" {
 
 variable "morpheus_password" {
   description = "Morpheus Data user password"
-  type       = string
-  sensitive  = true
+  type        = string
+  sensitive   = true
 }
 
 variable "morpheus_username" {
