@@ -14,8 +14,6 @@ terraform {
 provider "vsphere" {
   user                 = var.vsphere_provider_user
   password             = var.vsphere_provider_password
-#  user                 = var.vsphere_m_cloud_user
-#  password             = var.vsphere_m_cloud_password
   vsphere_server       = var.vsphere_ip
   allow_unverified_ssl = true
 }
