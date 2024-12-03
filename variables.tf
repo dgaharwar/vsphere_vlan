@@ -3,7 +3,7 @@
 ##################################################
 
 locals {
-  vlan_id = tonumber(var.vlan_id)
+  vlan_id = var.vlan_id
   begin_ip = "${local.vlan_id}" == 901 ? "10.180.25.2" : "${local.vlan_id}" == 902 ? "10.180.26.2" : "${local.vlan_id}" == 903 ? "10.180.27.2" : "null"
   end_ip = "${local.vlan_id}" == 901 ? "10.180.25.254" : "${local.vlan_id}" == 902 ? "10.180.26.254" : "${local.vlan_id}" == 903 ? "10.180.27.254" : "null"
 }
