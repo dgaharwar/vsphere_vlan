@@ -12,45 +12,37 @@ locals {
 
 variable "vsphere_provider_user"{
   type        = string
-  default     = "########"
 }
 
 variable "vsphere_provider_password"{
   type        = string
-  default     = "########"
 }
 
-variable "vsphere_m_cloud_user"{
-  type        = string
-  default     = "########"
-}
+#variable "vsphere_m_cloud_user"{
+#  type        = string
+#}
 
-variable "vsphere_m_cloud_password"{
-  type        = string
-  default     = "########"
-}
+#variable "vsphere_m_cloud_password"{
+#  type        = string
+#}
 
 variable "vsphere_ip"{
   type        = string
-  default     = "########"
 }
 
 variable "morpheus_url" {
   description = "URL of the Morpheus Instance"
   type        = string
-  default = "########"
 }
 
 variable "morpheus_password" {
   description = "Morpheus Data user password"
   type       = string
-  default = "########"
 }
 
 variable "morpheus_username" {
   description = "Morpheus Data username"
   type        = string
-  default     = "########"
 }
 
 variable "vlan_id" {
@@ -63,10 +55,10 @@ variable "vlan_id" {
 # Vsphere
 
 data "vsphere_datacenter" "datacenter" {
-  name = "Datacenter"
+  name = "labs-den-dc2-demo"
 }
 
 data "vsphere_distributed_virtual_switch" "vds" {
-  name          = "########"
+  name          = "VLAN0002 - Internal Server 2"
   datacenter_id = data.vsphere_datacenter.datacenter.id
 }
