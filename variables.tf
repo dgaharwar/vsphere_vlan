@@ -52,6 +52,6 @@ data "vsphere_datacenter" "datacenter" {
 }
 
 data "vsphere_distributed_virtual_switch" "vds" {
-  name          = "/LAN-Demo-02/VLAN0002 - Internal Server 2"
+  name          = "VLAN0002 - Internal Server 2"
   datacenter_id = data.vsphere_datacenter.datacenter.id
 }
