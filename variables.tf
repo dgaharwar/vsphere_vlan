@@ -48,10 +48,10 @@ variable "vlan_id" {
 # Vsphere
 
 data "vsphere_datacenter" "datacenter" {
-  name = "labs-den-dc2-qa"
+  name = "labs-den-dc2-demo"
 }
 
 data "vsphere_distributed_virtual_switch" "vds" {
-  name          = "VLAN0002 - Internal Server"
+  name          = "LAN-Demo-02"
   datacenter_id = data.vsphere_datacenter.datacenter.id
 }
