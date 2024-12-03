@@ -39,6 +39,7 @@ variable "morpheus_username" {
 
 variable "vlan_id" {
   type = string
+  default = ""
 }
 
 ##################################################
